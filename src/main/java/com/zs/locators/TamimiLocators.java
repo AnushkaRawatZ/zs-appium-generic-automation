@@ -38,6 +38,7 @@ public class TamimiLocators {
         homePageLocators.put("searchBar", By.id("com.zopsmart.stg.scarlet:id/et_search"));
         homePageLocators.put("searchIcon", By.id("com.zopsmart.stg.scarlet:id/ic_search"));
         homePageLocators.put("productsInSearch", By.xpath("//android.widget.TextView[@resource-id='com.zopsmart.stg.scarlet:id/tv_item_name']"));
+        homePageLocators.put("searchPlaceholder", By.xpath("//*[@text='What are you looking for?']"));
         //drawer locators
         drawerLocators.put("versionText", By.xpath("//android.widget.FrameLayout[@content-desc='Cart']/android.widget.FrameLayout[1]"));
         drawerLocators.put("appUrl", By.id("com.zopsmart.scarlet:id/et_store_url"));
@@ -46,6 +47,14 @@ public class TamimiLocators {
 
         //profile locators
         profileLocators.put("username", By.id("com.zopsmart.stg.scarlet:id/tv_name"));
+        profileLocators.put("editBtn", By.id("com.zopsmart.stg.scarlet:id/edit_profile_btn"));
+        profileLocators.put("dob", By.id("com.zopsmart.stg.scarlet:id/dobCl"));
+        profileLocators.put("fnameTextBox", By.id("com.zopsmart.stg.scarlet:id/firstNameEt"));
+        profileLocators.put("lnameTextBox", By.id("com.zopsmart.stg.scarlet:id/lastNameEt"));
+        profileLocators.put("emailTextBox", By.id("com.zopsmart.stg.scarlet:id/emailEt"));
+        profileLocators.put("submitBtn", By.id("com.zopsmart.stg.scarlet:id/submitBtn"));
+        profileLocators.put("okBtn", By.id("android:id/button1"));
+        profileLocators.put("editProfileSuccessfulLabel", By.id("android:id/message"));
 
         //products page locators
         productPageLocators.put("product", By.id("com.zopsmart.stg.scarlet:id/tv_item_name"));

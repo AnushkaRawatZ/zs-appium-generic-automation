@@ -3,9 +3,11 @@ package com.zs.pages.common;
 import com.zs.utils.CommonUtils;
 import com.zs.utils.LoggerUtil;
 import io.appium.java_client.android.AndroidDriver;
+import org.apache.commons.math3.analysis.function.Exp;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * The ProfilePage class is responsible for interacting with the profile page in the application.
@@ -46,7 +48,11 @@ public class ProfilePage {
      */
     public boolean isUsernameVisible(String appName){
         By usernameLoc = CommonUtils.getProfileLocator(appName, "username");
-        WebElement username = driver.findElement(usernameLoc);
+        WebElement username = wait.until(ExpectedConditions.visibilityOfElementLocated(usernameLoc));
         return username.isDisplayed();
+    }
+
+    public void clickEditBtn(String appName){
+        wait.until(ExpectedConditions.elementToBeClickable(CommonUtils.getProfileLocator(appName, "editBtn"))).click();
     }
 }
